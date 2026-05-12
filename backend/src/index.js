@@ -14,7 +14,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 // Health check
-app.get("/health", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
